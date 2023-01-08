@@ -16,15 +16,10 @@ const Cart = () => {
               <div className="h-52 w-52 mx-auto">
                 <img src={product.image} alt={product.image} />
               </div>
-              <h1 className="font-bold text-center">{product.name}</h1>
+              <h1 className="font-bold text-center">{product?.name}</h1>
               <p className="text-center font-semibold mb-3">
-                Offer Price: {product.price}
+                Offer Price: {product?.price}
               </p>
-              <div className=" flex-1">
-                <ul className="space-y-2">
-                  <li className="text-sm ">Price: {product.price}</li>
-                </ul>
-              </div>
             </div>
           </div>
         ))}

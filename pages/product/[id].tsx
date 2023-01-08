@@ -34,7 +34,7 @@ function SingleProduct() {
         </CardContent>
         <CardActions>
           <Button size="small">Price: {data?.price}</Button>
-          <Button size="small">offer percentage</Button>
+          <Button size="small">offer percentage {data?.offer_price}</Button>
         </CardActions>
       </Card>
     </Container>

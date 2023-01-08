@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { useAddToCartMutation } from "../../app/api/apiSlice";
-
+import { toast } from "react-hot-toast";
 function Product({ product }: any) {
-  const [addToCart, { isLoading, isError }] = useAddToCartMutation();
+  const [addToCart, { isLoading, isError, isSuccess }] = useAddToCartMutation();
 
   const clickHanld = () => {
     const object = {
@@ -14,6 +14,10 @@ function Product({ product }: any) {
     addToCart(object);
   };
 
+  if (!isSuccess) {
+    toast.success("Product Add to Cart Successfully");
+  }
+
   return (
     <>
       <div className="shadow-lg relative rounded-3xl border p-3 flex flex-col text-indigo-900">
@@ -23,7 +27,7 @@ function Product({ product }: any) {
           </div>
           <h1 className="font-bold text-center">{product.name}</h1>
           <p className="text-center font-semibold mb-3">
-            Offer Price: {product.price}
+            Offer Price: {product.offer_price}
           </p>
           <div className=" flex-1">
             <ul className="space-y-2">
