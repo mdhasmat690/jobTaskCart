@@ -15,7 +15,6 @@ function SingleProduct() {
   const router = useRouter();
   const id: any = router.query.id;
   const { data }: any = useContactQuery(id);
-  console.log(data);
 
   return (
     <Container sx={{ my: "25px" }}>
