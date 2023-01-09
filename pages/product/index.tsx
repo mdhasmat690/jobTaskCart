@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useAddToCartMutation } from "../../app/api/apiSlice";
 import { toast } from "react-hot-toast";
-function Product({ product }: any) {
+export function Product({ product }: any) {
   const [addToCart, { isLoading, isError, isSuccess }] = useAddToCartMutation();
 
   const clickHanld = () => {
@@ -50,5 +50,3 @@ function Product({ product }: any) {
     </>
   );
 }
-
-export default Product;

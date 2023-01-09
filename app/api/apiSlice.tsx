@@ -2,7 +2,6 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export interface Contact {
   id: string;
-  _id: string;
   name: string;
   details: string;
   image: string;
